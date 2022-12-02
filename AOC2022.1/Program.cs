@@ -2,7 +2,7 @@
 Console.WriteLine();
 await Assignment2();
 
-async Task Assignment2()
+static async Task Assignment2()
 {
     var elfInventories = await GetElfInventories();
 
@@ -12,7 +12,7 @@ async Task Assignment2()
     Console.WriteLine("Top 3 total: {0}.", top3Total);
 }
 
-async Task Assignment1()
+static async Task Assignment1()
 {
     var elfInventories = await GetElfInventories();
 
@@ -22,7 +22,7 @@ async Task Assignment1()
     Console.WriteLine("Total calories: {0}.", totalCalories);
 }
 
-async Task<List<List<int>>> GetElfInventories()
+static async Task<List<List<int>>> GetElfInventories()
 {
     var lines = await File.ReadAllLinesAsync("input/assignment-1.txt");
     var list = new List<List<int>>();
